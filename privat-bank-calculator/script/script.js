@@ -6,19 +6,31 @@ $(document).ready(function($){
 	 	minSize: 5
 	 });*/
 
-
+if(localStorage.getItem('theme') == 'light') {
+	$('body').removeClass('dark-theme');
+	$('#change-theme + label span').text('темную');
+} else {
+	$('body').addClass('dark-theme');
+	$('#change-theme').attr('checked', 'checked');
+	$('#change-theme + label span').text('светлую');
+}
 $('#change-theme').on('change', function() {
 
 	if ($('#change-theme:checked').val() == 'on') {
 		$('#change-theme + label span').text('светлую');
+		localStorage.setItem('theme', 'dark');
+		console.log(localStorage.getItem('theme'));
 	} else {
 		$('#change-theme + label span').text('темную');
+		localStorage.setItem('theme', 'light');
+		console.log(localStorage.getItem('theme'));
 	}
 
 	$('body').toggleClass('dark-theme');
 
 });
 
+// TO DO: Использовать куки или локалсторадж для запоминания темы пользователя
 
 }); // <-- end ready
 
