@@ -18,42 +18,42 @@
   }
 }
 */
- 
+
  [class^="icon-"]:before, [class*=" icon-"]:before {
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
   speak: none;
- 
+
   display: inline-block;
   text-decoration: inherit;
   width: 1em;
   margin-right: .2em;
   text-align: center;
   /* opacity: .8; */
- 
+
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
   text-transform: none;
- 
+
   /* fix buttons height, for twitter bootstrap */
   line-height: 1em;
- 
+
   /* Animation center compensation - margins should be symmetric */
   /* remove if not needed */
   margin-left: .2em;
- 
+
   /* you can be more comfortable with increased icons size */
   /* font-size: 120%; */
- 
+
   /* Font smoothing. That was taken from TWBS */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
+
   /* Uncomment for 3D effect */
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
- 
+
 .icon-circle:before { content: '\e800'; } /* '' */
 .icon-circle-dot:before { content: '\e801'; } /* '' */
 
@@ -71,9 +71,38 @@
 body{
 	padding: 0 35px;
 	font-family: 'PT Sans', sans-serif;
-	color: #2a2a2a;
+}
+/*
+ * DARK THEME
+ */
+.dark-theme {
+  color : #fff !important;
+  background : #2a2a2a !important;
+}
+.dark-theme input#price,
+.dark-theme input#cash {
+  background: transparent;
+  color: #fff;
+}
+.dark-theme p span {
+  color: #fff !important;
+}
+.dark-theme input[type=radio] + label::before ,
+.dark-theme input[type=radio]:checked + label::before {
+  color: #fff !important;
+}
+.dark-theme  .social a i {
+  background: #fff;
+  color: #2a2a2a;
+  border: 2px solid #fff;
+}
+.dark-theme  .social a:hover i {
+  background: #2a2a2a;
+  color: #fff;
+  border: 2px solid #fff;
 }
 
+/*END THEME*/
 #cash,
 label[for=cash] { display: none; }
 
@@ -87,7 +116,7 @@ label,
 label[for=full_pay],
 label[for=not_full_pay] {
 	position: relative;
-	padding-left: 20px; 
+	padding-left: 20px;
 	margin-right: 10px;
 }
 
@@ -119,7 +148,7 @@ input[type=radio]:checked + label::before{
 hr {
 	height: 1px;
 	background: #26a65b;
-}	
+}
 
 .required {
 	display: none;
@@ -208,4 +237,95 @@ label[for=cash],
 .check-limit a:hover {
 	color: #fff;
 	background: #26a65b;
+}
+/* Cначала обозначаем стили для IE8 и более старых версий
+т.е. здесь мы немного облагораживаем стандартный чекбокс. */
+#change-theme:focus {
+  box-shadow: none;
+  outline: none;
+}
+.checkbox {
+  vertical-align: top;
+  margin: 0 3px 0 0;
+  width: 17px;
+  height: 17px;
+}
+/* Это для всех браузеров, кроме совсем старых, которые не поддерживают
+селекторы с плюсом. Показываем, что label кликабелен. */
+.checkbox + label {
+  cursor: pointer;
+}
+
+/* Далее идет оформление чекбокса в современных браузерах, а также IE9 и выше.
+Благодаря тому, что старые браузеры не поддерживают селекторы :not и :checked,
+в них все нижеследующие стили не сработают. */
+
+/* Прячем оригинальный чекбокс. */
+.checkbox:not(checked) {
+  position: absolute;
+  opacity: 0;
+}
+.checkbox:not(checked) + label {
+  position: relative; /* будем позиционировать псевдочекбокс относительно label */
+  padding: 0 0 0 60px; /* оставляем слева от label место под псевдочекбокс */
+}
+/* Оформление первой части чекбокса в выключенном состоянии (фон). */
+.checkbox:not(checked) + label:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+}
+/* Оформление второй части чекбокса в выключенном состоянии (переключатель). */
+.checkbox:not(checked) + label:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: all .2s; /* анимация, чтобы чекбокс переключался плавно */
+}
+/* Меняем фон чекбокса, когда он включен. */
+.checkbox:checked + label:before {
+  background: #9FD468;
+}
+/* Сдвигаем переключатель чекбокса, когда он включен. */
+.checkbox:checked + label:after {
+  left: 26px;
+}
+/* Показываем получение фокуса. */
+.checkbox:focus + label:before {
+  box-shadow: 0 0 0 3px rgba(255,255,0,.5);
+}
+
+.copyright {
+	text-align: center;
+}
+.social a i {
+	display: inline-block;
+	vertical-align: middle;
+	margin-top: 5px;
+	margin-right: 10px;
+	width: 36px;
+	height: 36px;
+	border-radius: 50%;
+	background: #2a2a2a;
+	font-size: 23px;
+	line-height: 35px;
+	color: #fff;
+	border: 2px solid #2a2a2a;
+}
+.social a:hover i {
+	background: transparent;
+	border: 2px solid #2a2a2a;
+	color: #2a2a2a;
 }

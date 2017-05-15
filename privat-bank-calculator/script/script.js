@@ -5,6 +5,21 @@ $(document).ready(function($){
 	 	round : true,
 	 	minSize: 5
 	 });*/
+
+
+$('#change-theme').on('change', function() {
+
+	if ($('#change-theme:checked').val() == 'on') {
+		$('#change-theme + label span').text('светлую');
+	} else {
+		$('#change-theme + label span').text('темную');
+	}
+
+	$('body').toggleClass('dark-theme');
+
+});
+
+
 }); // <-- end ready
 
 
@@ -53,13 +68,13 @@ $('#btn').click(function(event) {
 		var price = $('#price').val();
 		var count = $('#count').val();
 		var cash = $('#cash').val();
-		
+
 		// Формулы
 		var bonus = 11 * count;
 		var overpayment = (price * 0.029) * count;
 		var payment = ((price-cash) + overpayment) / count;
 		var one_payment = overpayment / count;
-		 
+
 		//Вывод данных
 		$('.result span:first()').html(Math.round(bonus));
 		$('.result p:nth-child(2) span').html(Math.round(payment));
@@ -77,4 +92,3 @@ $('#full_pay, label[for=full_pay]').click(function(event) {
 $('#not_full_pay, label[for=not_full_pay]').click(function(event) {
 	$('#cash , label[for=cash]').slideDown(200);
 });
-
