@@ -1,11 +1,13 @@
 $(document).ready(function($){
-//****** СНЕГ
+//****** СНЕГ *******//
 /* $(document).snowfall({
 	 	shadow : true,
 	 	round : true,
 	 	minSize: 5
 	 });*/
 
+	 
+// Проверка ранее выбранной темы пользователем
 if(localStorage.getItem('theme') == 'light') {
 	$('body').removeClass('dark-theme');
 	$('#change-theme + label span').text('темную');
@@ -14,6 +16,8 @@ if(localStorage.getItem('theme') == 'light') {
 	$('#change-theme').attr('checked', 'checked');
 	$('#change-theme + label span').text('светлую');
 }
+
+// Смена темы
 $('#change-theme').on('change', function() {
 
 	if ($('#change-theme:checked').val() == 'on') {
@@ -29,8 +33,6 @@ $('#change-theme').on('change', function() {
 	$('body').toggleClass('dark-theme');
 
 });
-
-// TO DO: Использовать куки или локалсторадж для запоминания темы пользователя
 
 }); // <-- end ready
 
