@@ -6,7 +6,7 @@ $(document).ready(function($){
 	 	minSize: 5
 	 });*/
 
-	 
+
 // Проверка ранее выбранной темы пользователем
 if(localStorage.getItem('theme') == 'light') {
 	$('body').removeClass('dark-theme');
@@ -63,6 +63,7 @@ $('#btn').click(function(event) {
 		// Формулы
 		var overpayment = ((price - cash) * 0.029) * count;
 		var bonus = overpayment / (price / 365);
+		console.log(bonus);
 		var payment = ((price - cash) + overpayment) / count;
 		var one_payment = overpayment / count;
 
@@ -106,3 +107,18 @@ $('#full_pay, label[for=full_pay]').click(function(event) {
 $('#not_full_pay, label[for=not_full_pay]').click(function(event) {
 	$('#cash , label[for=cash]').slideDown(200);
 });
+
+
+// Limit checked
+$('#check_limit').on('submit', function(event) {
+	event.preventDefault();
+
+  var url = 'https://paypartslimit.privatbank.ua/pp-limit/check/phone';
+	var number = $('#number').val();
+
+	$.getJSON(url + "/" + number + "?jsoncallback=?")
+		.done(function(responseObj) {
+			//console.log(responseObj);
+		});
+
+})

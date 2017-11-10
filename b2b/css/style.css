@@ -1,0 +1,1161 @@
+@font-face {
+    font-family: AvenirBook;
+    src: url('../fonts/avenir/AvenirBook.otf');
+}
+
+@font-face {
+    font-family: AvenirRoman;
+    src: url('../fonts/avenir/AvenirRoman.otf');
+}
+
+@font-face {
+    font-family: AvenirMedium;
+    src: url('../fonts/avenir/AvenirMedium.otf');
+}
+
+body {
+    line-height: 100%;
+    font-family: AvenirRoman;
+    line-height: 100%;
+}
+
+h1, h2, h3, h4 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+.color-white {
+    color: white;
+}
+
+.color-blue {
+    color: #3197ef;
+}
+
+.inline-list {
+    padding: 0;
+    margin: 0;
+    font-size: 0;
+    list-style: none;
+}
+
+.inline-list li {
+    font-size: 14px;
+    display: inline-block;
+}
+
+a {
+    transition: .15s opacity ease-in-out;
+    display: inline-block;
+    cursor: pointer;
+}
+
+a:hover {
+    opacity: .6;
+}
+
+.container-fluid {
+    overflow-x: hidden;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 14px 0;
+}
+
+header h2,
+footer h2 {
+    font-family: AvenirBook;
+    font-size: 24px;
+    margin: 0;
+}
+
+header h2,
+header a {
+    color: #fff;
+}
+
+header .row {
+    text-align: center;
+}
+
+header .row > div {
+    display: inline-block;
+}
+
+.header-nav {
+    margin-top: 7px;
+}
+
+.header-nav li {
+    padding: 0 20px;
+}
+
+.header-nav li:first-child {
+    padding-left: 0;
+}
+
+header li a {
+    font-size: 13px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.sign-in a {
+    border: 1px solid #FFFFFF;
+    border-radius: 100px;
+    padding: 10px 44px;
+}
+
+.lang {
+    vertical-align: middle;
+    margin-left: 30px;
+    position: relative;
+}
+
+.lang-list {
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    top: 100%;
+    right: 0;
+}
+
+.lang-list li {
+    margin-top: 3px;
+}
+
+.lang:hover .lang-list {
+    display: block;
+    visibility: visible;
+    opacity: 1;
+    transition: .4s opacity ease-in-out;
+}
+
+.hp-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../imgs/hg-bckg.png') top center;
+    background-size: cover;
+    padding-top: 226px;
+    text-align: center;
+    min-height: 720px;
+}
+
+.hp-hero__heading {
+    font-family: AvenirBook;
+    font-size: 46px;
+    line-height: 65px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.hp-hero__subhead {
+    font-family: 'Open Sans';
+    font-size: 24px;
+    font-weight: 300;
+    font-style: italic;
+    margin: 30px 0 40px 0
+}
+
+.try-free {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    border-radius: 100px;
+    background-color: #3197ef;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
+    width: 210px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+
+/* hp-stats */
+.hp-stats {
+    min-height: 120px;
+    background-color: #fbfbfb;
+}
+
+.hp-stats__list {
+    margin-top: 32px;
+}
+
+.hp-stats__list li {
+    font-family: "Open Sans";
+    font-size: 18px;
+    line-height: 100%;
+    font-weight: 300;
+    font-style: italic;
+    color: #8a8a8a;
+}
+
+.hp-stats__list b {
+    font-family: AvenirBook;
+    font-size: 24px;
+    font-weight: 900;
+    display: block;
+    margin-bottom: 10px;
+    clear: both;
+    font-style: normal;
+}
+
+.w-25per {
+    width: 25%;
+}
+
+.w-19per {
+    width: 19%;
+}
+
+.w-12per {
+    width: 12%;
+}
+
+/* features */
+.features {
+    margin-top: 160px;
+    padding-bottom: 40px;
+}
+
+.features-img {
+    height: 589px;
+    max-width: initial;
+}
+
+.features-header {
+    font-family: AvenirBook;
+    font-size: 36px;
+    line-height: 50px;
+    font-weight: 300;
+    color: #262f38;
+}
+
+.features-tours {
+    margin-top: 78px;
+}
+
+.features-subheader {
+    font-family: 'Open Sans';
+    font-size: 32px;
+    font-weight: 300;
+    color: #262f38;
+    margin-top: 61px;
+}
+
+.features-text {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    line-height: 1.78;
+    color: #4a4a4a;
+    margin-top: 30px;
+}
+
+.features-content {
+    margin-top: 60px;
+}
+
+.features-content li {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-left: 12px;
+    background-color: #4f5e6b;
+    vertical-align: middle;
+}
+
+.features-content li:first-child {
+    width: 10px;
+    height: 10px;
+    background-color: #3197ef;
+    margin-left: 0;
+}
+
+.features-content li:last-child {
+    width: auto;
+    height: auto;
+    background: none;
+    border-radius: inherit;
+}
+
+.features-content li:last-child a {
+    width: 42px;
+    height: 42px;
+    display: inline-block;
+    background-color: #3197ef;
+    margin-left: 77px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.features-content li:last-child i {
+    color: #fff;
+    line-height: 42px;
+    font-size: 20px;
+}
+
+/* Our products*/
+.our-products {
+    margin-top: 275px;
+    border-bottom: 1px solid #d0d5d8;
+    padding-bottom: 150px;
+}
+
+.our-products__heading {
+    font-family: 'AvenirBook';
+    font-size: 48px;
+    font-weight: 300;
+    text-align: left;
+    color: #262f38;
+}
+
+.our-products__subhead {
+    font-family: 'AvenirBook';
+    font-size: 32px;
+    font-weight: 300;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    color: #262f38;
+    margin-top: 210px;
+}
+
+.our-products__text {
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 1.78;
+    color: #4a4a4a;
+    margin-top: 30px;
+}
+
+.our-products__free-btn {
+    background-color: transparent;
+    border: 1px solid #3197ef;
+    width: 190px;
+    margin-top: 40px;
+    box-shadow: none;
+}
+
+.our-products__suppliers-img {
+    transform: rotate(-345deg);
+    max-width: 400px;
+    float: right;
+    margin-top: 40px;
+}
+
+.our-products__marketplace-img {
+    float: left;
+    height: 634px;
+    max-width: initial;
+    margin-left: -320px;
+}
+
+.our-product2 {
+    margin-top: 106px;
+}
+
+.our-product2 .our-products__subhead {
+    margin-top: 193px;
+}
+
+.our-product3 {
+    margin: 130px 0 258px 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.our-product3 .our-products__subhead {
+    margin-top: 159px;
+}
+
+.our-products__agents-img {
+    height: 621px;
+    max-width: initial;
+    float: left;
+    margin-left: -25px;
+}
+
+/* Pricing */
+.pricing {
+    background-color: #fbfbfb;
+    padding-bottom: 125px;
+}
+
+.pricing-heading {
+    font-family: 'AvenirBook';
+    font-size: 48px;
+    color: #262f38;
+    margin-top: 140px;
+    margin-bottom: 25px;
+}
+
+.pricing-subhead {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: #4f5e6b;
+    margin-bottom: 59px;
+}
+
+.pricing a {
+    font-family: Montserrat;
+    font-size: 16px;
+    color: #262f38;
+    width: 191px;
+    height: 70px;
+    border: solid 1px #d0d5d8;
+    line-height: 70px;
+}
+
+.pricing__switch {
+    margin-bottom: 59px;
+}
+
+.pricing .pricing__switch-left {
+    border-radius: 100px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: 0;
+    color: blueviolet;
+}
+
+.pricing .pricing__switch-right {
+    border-radius: 100px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-left: 0;
+}
+
+.pricing a.active {
+    color: #ffffff;
+    background-color: #4f5e6b;
+}
+
+.pricing_technology-list {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing_technology-list li {
+    margin-bottom: 24px;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    color: #000000;
+}
+
+.pricing-block__wrap {
+    overflow: hidden;
+}
+
+.pricing-block {
+    padding: 45px 35px 50px 50px;
+    border: solid 1px #d0d5d8;
+    overflow: hidden;
+    display: inline-block;
+    text-align: left;
+    margin-bottom: 35px;
+}
+
+.pricing-block .try-free {
+    box-shadow: none;
+    color: #fff;
+    width: 230px;
+    margin-top: 37px;
+}
+
+.pricing-block.active {
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.1);
+}
+
+.price-value {
+    font-family: 'AvenirRoman';
+    font-size: 24px;
+}
+
+/*blue*/
+.pricing-basic .price-value,
+.pricing-basic li span {
+    color: #4990e2;
+}
+
+.pricing-basic .try-free {
+    background-color: #4990e2;
+}
+
+/*green*/
+.pricing-pro .price-value,
+.pricing-pro li span {
+    color: #21c554;
+}
+
+.pricing-pro .try-free {
+    background-color: #21c554;
+}
+
+/*red*/
+.pricing-advanced .price-value,
+.pricing-advanced li span {
+    color: #fe3150;
+}
+
+.pricing-advanced .try-free {
+    background-color: #fe3150;
+}
+
+.price-desc {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    color: #262f38;
+}
+
+.pricing_technology {
+    clear: both;
+    overflow: hidden;
+}
+
+.pricing_technology .pricing-subhead {
+    margin: 42px 0 24px 0;
+}
+
+.price-name {
+    font-family: 'Open Sans';
+    text-transform: uppercase;
+    font-size: 18px;
+    letter-spacing: 6px;
+    color: #262f38;
+}
+
+/*Testimonial*/
+.testimonials {
+    min-height: 620px;
+    background: url(../imgs/testimonials-bckg.png) top center;
+    background-size: cover;
+}
+
+.testimonial-text {
+    font-family: 'Open Sans';
+    font-size: 32px;
+    font-weight: 300;
+    font-style: italic;
+    display: inline-block;
+    margin: 220px 0 34px 0;
+}
+
+.testimonial-author {
+    text-transform: uppercase;
+    font-family: 'AvenirBook';
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 4.4px;
+    margin-bottom: 120px;
+}
+
+.testimonials-list li {
+    margin-right: 100px;
+    vertical-align: middle;
+}
+
+.testimonials-list a {
+    background-size: cover;
+    width: 60px;
+    height: 60px;
+    opacity: 0.3;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transition: .25s height ease-in-out, .25s width ease-in-out, .25s opacity ease-in-out;
+}
+
+.testimonials-list li:first-child a {
+    background-image: url('../imgs/testimonial-1.png');
+}
+
+.testimonials-list li:nth-child(2) a {
+    background-image: url('../imgs/testimonial-2.png');
+}
+
+.testimonials-list li:last-child {
+    margin-right: 0;
+}
+
+.testimonials-list li:last-child a {
+    background-image: url('../imgs/testimonial-3.png');
+}
+
+.testimonials-list .active a,
+.testimonials-list a:hover {
+    width: 80px;
+    height: 80px;
+    opacity: 1;
+}
+
+/*About us*/
+.about-us {
+    overflow: hidden;
+    padding: 145px 0;
+}
+
+.about-heading {
+    font-family: 'AvenirBook';
+    font-size: 36px;
+    color: #262f38;
+    margin-top: 96px;
+}
+
+.about-text {
+    font-family: 'Open Sans';
+    font-size: 16px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.75;
+    color: #4f5e6b;
+    margin: 20px 0 75px 0;
+
+}
+
+.about-us .try-free {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px #3197ef solid;
+}
+
+.what-do__heading {
+    font-family: 'AvenirBook';
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: #262f38;
+    text-transform: uppercase;
+    margin-bottom: 38px;
+}
+
+.what-do__text {
+    font-family: 'Lato';
+    font-size: 18px;
+    line-height: 1.78;
+    color: #4f5e6b;
+}
+
+.what-do__text a {
+    font-family: 'Open Sans';
+    color: #389aef;
+}
+
+.vacancies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.vacancies li {
+    width: 270px;
+    height: 120px;
+    line-height: 120px;
+    text-align: center;
+    border-radius: 8px;
+    border: solid 1px #d0d5d8;
+    display: inline-block;
+    margin-bottom: 30px;
+    font-family: 'AvenirRoman';
+    font-size: 16px;
+    color: #4f5e6b;
+}
+
+.send-cv {
+    margin-top: 20px;
+    padding-left: 85px;
+}
+
+.send-cv span {
+    font-family: 'Open Sans';
+    font-size: 18px;
+    font-weight: 300;
+    font-style: italic;
+    color: #161621;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.send-cv a {
+    width: 190px;
+}
+
+/*Footer*/
+footer {
+    background-color: #262f38;
+    overflow: hidden;
+}
+
+.footer-list {
+    margin: 80px 0 100px 0;
+}
+
+footer .inline-list li {
+    vertical-align: top;
+}
+
+.column-list {
+    padding: 0;
+}
+
+.column-list li {
+    display: block;
+}
+
+.footer-list ul li {
+    opacity: 0.8;
+    font-family: 'Open Sans';
+    font-size: 16px;
+    line-height: 1.56;
+    font-weight: 300;
+    margin-bottom: 12px;
+}
+
+.footer-list ul li:first-child {
+    font-family: 'AvenirBook';
+    font-size: 14px;
+    line-height: 1.79;
+    letter-spacing: 2.3px;
+    text-transform: uppercase;
+    letter-spacing: 1.8px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+.footer-list > li:first-child {
+    margin-right: 76px;
+}
+
+.footer-list > li:nth-child(2) {
+    margin-right: 70px;
+}
+
+.footer-list > li:nth-child(3) {
+    margin-right: 71px;
+}
+
+.footer-list > li:nth-child(4) {
+    margin-right: 73px;
+}
+
+.footer-list > li:nth-child(5) {
+    margin-right: 99px;
+}
+
+.social li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.social li:first-child {
+    padding: 0;
+}
+
+.social li:nth-child(2) {
+    padding-left: 0;
+}
+
+.social i {
+    color: #fff;
+}
+
+.social li:first-child {
+    display: block;
+}
+
+.rights-reserved {
+    font-family: 'Open Sans';
+    font-size: 14px;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 34px;
+}
+
+@media screen and (max-width: 1199px) {
+
+    .header-nav li {
+        padding: 0 8px;
+    }
+
+    .sign-in a {
+        padding: 7px 34px;
+    }
+
+    .hp-stats__list .w-19per {
+        width: 18%;
+    }
+
+    .hp-stats__list .w-12per {
+        width: 14%;
+    }
+
+    .features-img {
+        height: 420px;
+    }
+
+    .features-subheader {
+        margin-top: 0;
+    }
+
+    .our-products {
+        margin-top: 120px;
+    }
+
+    .our-products__subhead {
+        margin-top: 80px;
+    }
+
+    .our-products__suppliers-img {
+        margin-top: 5px;
+        padding-right: 40px;
+    }
+
+    .our-products__marketplace-img {
+        height: 560px;
+        margin-left: -290px;
+    }
+
+    .our-product2 .our-products__subhead {
+        margin-top: 130px;
+    }
+
+    .our-product3 {
+        margin-bottom: 30px;
+    }
+
+    .pricing-heading {
+        margin-top: 60px;
+    }
+
+    .pricing-block {
+        padding: 25px;
+    }
+
+    .testimonials-list {
+        margin-bottom: 50px;
+    }
+
+    .vacancies li {
+        max-width: 100%;
+    }
+
+    .about-heading {
+        margin-top: 55px;
+    }
+
+    .send-cv {
+        padding-left: 30px;
+    }
+
+    .footer-list > li:first-child {
+        margin-right: 55px;
+    }
+
+    .footer-list > li:nth-child(5) {
+        margin-right: 45px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .hp-stats__list li {
+        font-size: 17px;
+    }
+
+    .hp-stats__list .w-19per {
+        width: 17%;
+    }
+
+    .hp-stats__list .w-12per {
+        width: 16%;
+    }
+
+    .hp-stats__list {
+        margin-top: 38px;
+    }
+
+    .features {
+        margin-top: 60px;
+    }
+
+    .features-img {
+        height: 340px;
+        margin-top: 120px;
+    }
+
+    .features-subheader {
+        margin-top: 0;
+    }
+
+    .features-content {
+        margin-top: 25px;
+    }
+
+    .our-products {
+        margin-top: 80px;
+    }
+
+    .our-products__suppliers-img {
+        margin-top: 70px;
+        padding-right: 20px;
+        max-width: 270px;
+    }
+
+    .our-product2 {
+        margin-top: 110px;
+    }
+
+    .our-products__marketplace-img {
+        height: 450px;
+        margin-left: -240px;
+    }
+
+    .our-product2 .our-products__subhead {
+        margin-top: 52px;
+    }
+
+    .our-products__agents-img {
+        height: 500px;
+    }
+
+    .our-product3 .our-products__subhead {
+        margin-top: 80px;
+    }
+
+    .pricing-block {
+        padding: 30px 10px;
+    }
+
+    .pricing-block .try-free {
+        width: 200px;
+        height: 50px;
+        line-height: 50px;
+    }
+
+    .about-us {
+        padding-top: 90px;
+    }
+
+    .about-heading {
+        margin-top: 10px;
+    }
+
+    .send-cv {
+        padding-left: 0;
+    }
+
+    .send-cv span {
+        margin-right: 30px;
+    }
+
+    .send-cv a {
+        width: 130px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    footer h2 {
+        font-size: 22px;
+    }
+
+    footer .row .footer-list > li {
+        margin-right: 26px;
+    }
+
+    .footer-list ul li:first-child {
+        font-size: 12px;
+    }
+
+    .footer-list ul li {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+    header {
+        top: 0;
+    }
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+    .hp-hero {
+        min-height: 450px;
+        padding-bottom: 23px;
+    }
+
+    .hp-hero__heading {
+        font-size: 38px;
+        line-height: 44px;
+    }
+
+    header .row {
+        margin: 0;
+    }
+
+    .header-nav {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+
+    .header-nav li {
+        margin-bottom: 10px;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .logo h2 {
+        font-size: 42px;
+    }
+
+    .hp-stats__list {
+        text-align: center;
+    }
+
+    .container .hp-stats__list li {
+        width: auto;
+        text-align: center;
+        margin: 0 20px 30px 0;
+    }
+
+    .features {
+        border-bottom: 1px solid #d0d5d8;
+        margin-bottom: 40px;
+    }
+
+    .our-products {
+        margin-top: 40px;
+        padding-bottom: 90px;
+    }
+
+    .our-products__imgs {
+        float: none;
+        padding: 0;
+        display: inline-block;
+        max-width: 70%;
+        margin: 0;
+        height: auto;
+        width: auto;
+    }
+
+    .features-img {
+        max-width: 100%;
+    }
+
+    .our-products__suppliers-img {
+        margin-top: 90px;
+        width: 360px;
+    }
+
+    .our-products__marketplace-img {
+        max-width: 100%;
+    }
+
+    .our-product3 .our-products__subhead {
+        margin-top: 40px;
+    }
+
+    .our-product3 {
+        margin-bottom: 0;
+    }
+
+    .our-products__agents-img {
+        margin-top: 40px;
+        max-width: 100%;
+    }
+
+    .pricing-block {
+        padding: 35px;
+        max-width: 350px;
+        margin-bottom: 30px;
+    }
+
+    .pricing a {
+        width: 145px;
+    }
+
+    .pricing {
+        padding-bottom: 50px;
+    }
+
+    .testimonials {
+        min-height: 520px;
+    }
+
+    .testimonial-text {
+        margin-top: 90px;
+    }
+
+    .testimonial-author {
+        margin-bottom: 80px;
+    }
+
+    .testimonials-list li {
+        margin-right: 40px;
+    }
+
+    .testimonials-list .active a,
+    .testimonials-list a:hover {
+        width: 75px;
+        height: 75px;
+    }
+
+    .vacancies {
+        margin-top: 50px;
+    }
+
+    .vacancies ul {
+        text-align: center;
+    }
+
+    .send-cv {
+        text-align: center;
+    }
+
+    .send-cv span {
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    .about-us {
+        padding-bottom: 80px;
+    }
+
+    .column-list {
+        margin-bottom: 40px;
+    }
+
+    .footer-list {
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .container .hp-stats__list li {
+        width: 100%;
+    }
+
+    .features-header {
+        font-size: 34px;
+        line-height: 40px;
+    }
+
+    .our-products__suppliers-img {
+        margin-top: 70px;
+    }
+
+    .our-products__heading {
+        font-size: 38px;
+    }
+
+    .our-products__subhead {
+        font-size: 26px;
+        margin-top: 40px;
+    }
+}
