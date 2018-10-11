@@ -54,7 +54,6 @@ $('#btn').click(function(event) {
 
 	if ($('input:checked').val() != 1 && $('#price').val() != '') {
 
-
 		// Переменные
 		var price = $('#price').val();
 		var count = $('#count').val();
@@ -62,16 +61,13 @@ $('#btn').click(function(event) {
 
 		// Формулы
 		var overpayment = ((price - cash) * 0.029) * count;
-		var bonus = overpayment / (price / 365);
-		console.log(bonus);
 		var payment = ((price - cash) + overpayment) / count;
 		var one_payment = overpayment / count;
 
 		//Вывод данных
-		$('.result span:first()').html(Math.round(bonus));
-		$('.result p:nth-child(2) span').html(Math.round(payment));
-		$('.result p:nth-child(3) span').html(Math.round(overpayment));
-		$('.result p:nth-child(4) span').html(Math.round(one_payment));
+		$('.result span:first()').html(Math.round(payment));
+		$('.result p:nth-child(2) span').html(Math.round(overpayment));
+		$('.result p:nth-child(3) span').html(Math.round(one_payment));
 
 	} else if ($('input:checked').val() != 0 && $('#price').val() != ''){
 
@@ -85,17 +81,14 @@ $('#btn').click(function(event) {
 		var cash = $('#cash').val();
 
 		// Формулы
-		var bonus = 11 * count;
 		var overpayment = (price * 0.029) * count;
 		var payment = ((price-cash) + overpayment) / count;
 		var one_payment = overpayment / count;
 
 		//Вывод данных
-		$('.result span:first()').html(Math.round(bonus));
-		$('.result p:nth-child(2) span').html(Math.round(payment));
-		$('.result p:nth-child(3) span').html(Math.round(overpayment));
-		$('.result p:nth-child(4) span').html(Math.round(one_payment));
-
+		$('.result span:first()').html(Math.round(payment));
+		$('.result p:nth-child(2) span').html(Math.round(overpayment));
+		$('.result p:nth-child(3) span').html(Math.round(one_payment));
 	}
 
 });
