@@ -31,7 +31,6 @@ $('#change-theme').on('change', function() {
 	}
 
 	$('body').toggleClass('dark-theme');
-
 });
 
 }); // <-- end ready
@@ -39,6 +38,23 @@ $('#change-theme').on('change', function() {
 
 $('#btn').click(function(event) {
 	event.preventDefault();
+
+	// Переменные
+	var price = $('#price').val();
+	var count = $('#count').val();
+	var cash = $('#cash').val();
+
+	var countAndOutputData = function () {
+		// Формулы
+		var overpayment = ((price - cash) * 0.029) * count;
+		var payment = ((price - cash) + overpayment) / count;
+		var one_payment = overpayment / count;
+
+		//Вывод данных
+		$('.result span:first()').html(Math.round(payment));
+		$('.result p:nth-child(2) span').html(Math.round(overpayment));
+		$('.result p:nth-child(3) span').html(Math.round(one_payment));
+	}
 
 	// Проверка полей обязательных для заполнения!
 	// Вывод сообщения ошибки!
@@ -53,42 +69,14 @@ $('#btn').click(function(event) {
 	});
 
 	if ($('input:checked').val() != 1 && $('#price').val() != '') {
-
-		// Переменные
-		var price = $('#price').val();
-		var count = $('#count').val();
-		var cash = $('#cash').val();
-
-		// Формулы
-		var overpayment = ((price - cash) * 0.029) * count;
-		var payment = ((price - cash) + overpayment) / count;
-		var one_payment = overpayment / count;
-
-		//Вывод данных
-		$('.result span:first()').html(Math.round(payment));
-		$('.result p:nth-child(2) span').html(Math.round(overpayment));
-		$('.result p:nth-child(3) span').html(Math.round(one_payment));
-
+		countAndOutputData();
 	} else if ($('input:checked').val() != 0 && $('#price').val() != ''){
 
 		$('#full_pay, label[for=full_pay]').click(function(event) {
 			$('#cash').val('0');
 		});
 
-		// Переменные
-		var price = $('#price').val();
-		var count = $('#count').val();
-		var cash = $('#cash').val();
-
-		// Формулы
-		var overpayment = (price * 0.029) * count;
-		var payment = ((price-cash) + overpayment) / count;
-		var one_payment = overpayment / count;
-
-		//Вывод данных
-		$('.result span:first()').html(Math.round(payment));
-		$('.result p:nth-child(2) span').html(Math.round(overpayment));
-		$('.result p:nth-child(3) span').html(Math.round(one_payment));
+		countAndOutputData();
 	}
 
 });
