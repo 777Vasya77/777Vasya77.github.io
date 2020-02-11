@@ -32,9 +32,9 @@ $('#btn-1').click(function(event) {
 	});
 
 	var oneYear = 365;
-	var twoYear = 730;
+	var twoYear = 183;
 	var oneYearMonth = 12;
-	var twoYearMonth = 24;
+	var twoYearMonth = 6;
 	var dateOfPurchase = $('#dateOfPurchase').val();
 	var dateOfBirth = $('#dateOfBirth').val();
 	var firstResult = moment(dateOfBirth).diff(dateOfPurchase);
@@ -70,9 +70,9 @@ $('#btn-2').click(function(event) {
 	});
 
 	var oneYear = 365;
-	var twoYear = 730;
+	var twoYear = 183;
 	var oneYearMonth = 12;
-	var twoYearMonth = 24;
+	var twoYearMonth = 6;
 	var dateOfPurchase = $('#dateOfPurchase').val();
 	var dateOfBirth = $('#dateOfBirth').val();
 	var firstResult = moment(dateOfBirth).diff(dateOfPurchase);
